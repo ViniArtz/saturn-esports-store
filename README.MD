@@ -2,8 +2,6 @@
 
 - Projeto de Estudo Feito Com a Api de Loja Fake[fake-Store](https://fakestoreapi.in)
 
-![logo-Loja](./src/images/saturn%20.png)
+![logo-Loja](./src/images/saturn%20.png)width="50%"
 
 - Logo do Projeto Feita por mim com Adobe Illustrator
-
-![]()

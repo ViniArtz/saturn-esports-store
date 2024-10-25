@@ -13,6 +13,22 @@ body {
   flex-direction: column;
 }
 
+.btn-flutuante {
+  position: fixed;
+  color: aliceblue;
+  background-color: var(--primary-red--);
+  padding: 15px;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 30px;
+  transition: 1s ease-in-out;
+}
+
+.btn-flutuante:hover {
+  transform: scale(1.15);
+  background-color: var(--dark-red--);
+}
+
 .header {
   width: 100%;
   background-color: #23262f;
@@ -168,9 +184,9 @@ hr {
   /* display: none; */
   background-color: #23262f;
   padding: 30px;
-  position: absolute;
+  position: fixed;
   top: 150px;
-  right: 100px;
+  right: 20px;
   width: 400px;
 }
 
@@ -183,6 +199,11 @@ hr {
   padding: 0 10px;
   border-radius: 5px;
   text-align: center;
+  transition: 0.5s ease-in-out;
+}
+
+.carrinho .fechar:hover {
+  background-color: var(--dark-red--);
 }
 
 .carrinho .item-carrinho {
@@ -231,4 +252,18 @@ hr {
   margin-top: 10px;
   padding: 10px;
   border-radius: 5px;
+}
+
+.carrinho .continuar:hover {
+  background-color: var(--dark-red--);
+  transition: 0.5s ease-in-out;
+}
+
+.carrinho .finalizar {
+  color: aliceblue;
+}
+
+.carrinho .finalizar:hover {
+  color: var(--gray--);
+  transition: 0.5s ease-in-out;
 }

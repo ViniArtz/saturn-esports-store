@@ -14,6 +14,7 @@ body {
 }
 
 .btn-flutuante {
+  cursor: pointer;
   position: fixed;
   color: aliceblue;
   background-color: var(--primary-red--);
@@ -65,7 +66,8 @@ body {
   gap: 6px;
 }
 
-.header .cabecalho ul li button {
+.header .cabecalho ul li a {
+  cursor: pointer;
   color: var(--gray--);
   font-size: 1rem;
   font-weight: 700;
@@ -74,7 +76,7 @@ body {
   transition: 0.5s ease-in-out;
 }
 
-.header .cabecalho ul li button:hover {
+.header .cabecalho ul li a:hover {
   color: var(--gray--);
   background-color: var(--primary-red--);
 }
@@ -123,6 +125,7 @@ hr {
 
 .produto .brand {
   display: flex;
+  align-items: center;
   flex-direction: column;
   overflow: hidden;
   width: 300px;
@@ -169,8 +172,9 @@ hr {
 .produto .botao-adicionar {
   color: white;
   background-color: var(--dark-red--);
-  padding: 10px;
-  border-radius: 10px;
+  width: 300px;
+  height: 40px;
+  border-radius: 20px;
   font-weight: 300;
   transition: 0.5s ease-in-out;
 }
@@ -181,7 +185,7 @@ hr {
 
 .carrinho {
   color: hsl(208, 100%, 97%, 30%);
-  /* display: none; */
+  display: none;
   background-color: #23262f;
   padding: 30px;
   position: fixed;
@@ -266,4 +270,126 @@ hr {
 .carrinho .finalizar:hover {
   color: var(--gray--);
   transition: 0.5s ease-in-out;
+}
+
+/* STYLE DA PÁGINA DETALHES */
+
+.btn-voltar {
+  text-align: center;
+  margin-top: 30px;
+  cursor: pointer;
+  color: white;
+  background-color: var(--primary-red--);
+  padding: 10px;
+  width: 150px;
+  border-radius: 20px;
+  transition: 0.5s ease-in;
+}
+
+.btn-voltar:hover {
+  background-color: var(--dark-red--);
+  transform: scale(1.05);
+}
+
+.container-detalhes {
+  margin-top: 50px;
+  background-color: #23262f;
+}
+
+.produto-clicado .produto-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+
+.produto-content .produto-imagem img {
+  width: 800px;
+}
+
+.produto-content .produto-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.produto-info hr {
+  border: 2px solid #4b5061;
+  margin-bottom: 40px;
+}
+
+.produto-info .produto-titulo {
+  color: var(--gray--);
+  font-size: 1.9rem;
+  text-transform: uppercase;
+}
+
+.produto-marca {
+  color: var(--gray--);
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+}
+
+.produto-preco {
+  color: greenyellow;
+  font-size: 3.5rem;
+}
+
+.produto-desconto {
+  color: green;
+  font-size: 0.7rem;
+}
+
+.produto-preco-pix {
+  color: green;
+}
+.produto-descricao h3 {
+  color: var(--primary-red--);
+  font-size: 0.9rem;
+}
+
+.produto-descricao p {
+  width: 70%;
+  color: var(--gray--);
+  font-size: 0.7rem;
+  font-weight: 100;
+  text-align: justify;
+}
+
+.btn-action {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.botao-add-detalhes {
+  width: 250px;
+  margin-top: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+  background-color: #00af00;
+  padding: 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.botao-add-detalhes:hover {
+  background-color: #006600;
+}
+
+.botao-comprar {
+  cursor: pointer;
+  width: 250px;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 700;
+  padding: 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.botao-comprar:hover {
+  background-color: var(--secondary-red--);
 }

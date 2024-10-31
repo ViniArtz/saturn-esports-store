@@ -33,11 +33,7 @@ function inicializarCarrinho() {
 
 function exibirCarrinhoAoClicar() {
     const docCarrinho = document.querySelector('.carrinho');
-    if (!docCarrinho) {
-        criarCarrinho();
-    } else {
-        docCarrinho.style.display = 'block';
-    }
+    docCarrinho.style.display = 'block';
     exibirCarrinho();
 }
 

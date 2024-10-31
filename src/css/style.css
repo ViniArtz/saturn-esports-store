@@ -378,18 +378,3 @@ hr {
 .botao-add-detalhes:hover {
   background-color: #006600;
 }
-
-.botao-comprar {
-  cursor: pointer;
-  width: 250px;
-  margin-top: 20px;
-  color: #fff;
-  font-weight: 700;
-  padding: 20px;
-  border-radius: 20px;
-  text-transform: uppercase;
-}
-
-.botao-comprar:hover {
-  background-color: var(--secondary-red--);
-}

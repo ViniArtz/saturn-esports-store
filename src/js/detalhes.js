@@ -10,7 +10,6 @@ async function fetchProdutoDetalhes() {
       throw new Error('Erro ao buscar detalhes do produto');
     }
     const produto = await response.json();
-    console.log(produto.json);
     return produto; // Retorna o objeto que contém 'product'
   } catch (error) {
     console.error('Erro:', error);
@@ -43,7 +42,6 @@ async function listarProduto() {
       <p class="produto-desconto">10% de desconto para pagamento no pix</p>
       <div class="btn-action">
         <button class="botao-add-detalhes" data-id="${detalhesProduto.id}">Adicionar ao Carrinho</button>
-        <button class="botao-comprar" data-id="${detalhesProduto.id}">Comprar Agora</button>
       </div>
       <hr>
       <div class="produto-descricao">

@@ -22,14 +22,6 @@ function inicializarCarrinho() {
     carregarCarrinho();
 }
 
-// Funções de criar/Adicionar/Excluir o carrinho
-// function criarCarrinho() {
-//     const containerEl = document.querySelector('.container');
-//     const divCarrinho = document.createElement('ul');
-//     divCarrinho.classList.add('carrinho');
-//     divCarrinho.style.display = 'block';
-//     containerEl.appendChild(divCarrinho);
-// }
 
 function exibirCarrinhoAoClicar() {
     const docCarrinho = document.querySelector('.carrinho');
@@ -71,10 +63,13 @@ function exibirCarrinho() {
     const totalCarrinho = somaCarrinho().toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
     carrinhoHTML += `<h3 class="total">Total: ${totalCarrinho}</h3>
                      <button class="continuar">Continuar comprando</button>
-                     <button class="finalizar">Finalizar Compras</button>`;
+                     <button class="finalizar">Finalizar Compras</button>
+                      <button class="limpar">Limpar Carrinho</button>`;
+                     
 
     docCarrinho.innerHTML = carrinhoHTML;
     configurarBotoesRemover();
+    configurarBotoesLimpar()
 }
 
 // Funções de manipulação do carrinho
@@ -106,6 +101,11 @@ function removerDoCarrinho(produtoId) {
     carrinho = carrinho.filter(produto => produto.id !== produtoId);
 }
 
+function limparCarrinho(){
+    const carrinhoLen = (carrinho.length = 0)
+    exibirCarrinho()
+}
+
 // Funções de eventos
 function configurarBotoesRemover() {
     const btnRemover = document.querySelectorAll('.remover-item');
@@ -120,6 +120,14 @@ function configurarBotoesRemover() {
     if (btnFechar) {
         btnFechar.addEventListener('click', ocultarCarrinho);
     }
+}
+
+function configurarBotoesLimpar() {
+    const btnLimpar = document.querySelector('.limpar');
+    if (btnLimpar) {
+        btnLimpar.addEventListener('click', limparCarrinho);
+    }
+    salvarCarrinho()
 }
 
 function configurarBotoesAdicionar(produtos) {

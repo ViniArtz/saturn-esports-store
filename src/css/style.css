@@ -185,6 +185,7 @@ hr {
 
 .carrinho {
   color: hsl(208, 100%, 97%, 30%);
+  overflow-y: scroll;
   display: none;
   background-color: #23262f;
   padding: 30px;
@@ -192,6 +193,7 @@ hr {
   top: 150px;
   right: 20px;
   width: 400px;
+  max-height: 500px;
 }
 
 .carrinho .fechar {
@@ -269,7 +271,17 @@ hr {
 
 .carrinho .finalizar:hover {
   color: var(--gray--);
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.carrinho .limpar {
+  margin-top: 5px;
+  color: aliceblue;
+}
+
+.carrinho .limpar:hover {
+  color: var(--gray--);
+  transition: 0.2s ease-in-out;
 }
 
 /* STYLE DA PÁGINA DETALHES */

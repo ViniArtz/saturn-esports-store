@@ -1,0 +1,27 @@
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #23262f;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-red--);
+  border-radius: 20px;
+  border: 3px solid #17181c;
+}
+
+.carrinho::-webkit-scrollbar {
+  width: 12px;
+}
+
+.carrinho::-webkit-scrollbar-track {
+  background: #23262f;
+}
+
+.carrinho::-webkit-scrollbar-thumb {
+  background-color: var(--primary-red--);
+  border-radius: 20px;
+  border: 3px solid #17181c;
+}

@@ -2,7 +2,7 @@ import { inicializarCarrinho, configurarBotoesAdicionar} from './carrinho.js';
 
 //Rota Produtos
 async function apiFetchProdutos() {
-    const response = await fetch(`https://fakestoreapi.in/api/products`);
+    const response = await fetch('https://fakestoreapi.in/api/products');
     const produtos = await response.json();
     return produtos;
 }
@@ -15,7 +15,9 @@ async function listaProdutos() {
     docLista.innerHTML = '<p>Carregando Produtos...</p>';
     let div = '';
 
-    produtos.products.forEach(produto => {
+    const produto = produtos.products
+
+    produto.forEach(produto => {
         const brl = produto.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
         const tituloLimitado = produto.title.length > 30 ? produto.title.substring(0, 30) + '...' : produto.title;
         div += `

@@ -1,4 +1,5 @@
-import { inicializarCarrinho, adicionarAoCarrinho } from './carrinho.js';
+import { inicializarCarrinho, adicionarAoCarrinho, } from './carrinho.js';
+// import { carregarTemaSalvo } from './script.js';
 
 const params = new URLSearchParams(window.location.search);
 const produtoId = params.get('id');
@@ -20,7 +21,7 @@ async function fetchProdutoDetalhes() {
 async function listarProduto() {
   const produtoClicado = document.querySelector('.produto-clicado');
   const produto = await fetchProdutoDetalhes();
-  
+
   if (!produto) {
     produtoClicado.innerHTML = '<p>Erro ao carregar produto.</p>';
     return;
@@ -69,8 +70,37 @@ function configurarBotoesAdicionarDetalhes(produto) {
   });
 }
 
+// Configurações de tema
+const btnMudarTema = document.getElementById('mudar-tema');
+const stylesheet = document.getElementById('theme-stylesheet');
+
+btnMudarTema.addEventListener('click', () => {
+  // Verifica o caminho atual do CSS
+  const currentTheme = stylesheet.getAttribute('href');
+
+  // Alterna entre os temas claro e escuro
+  if (currentTheme === './src/css/temaEscuro.css') {
+    stylesheet.setAttribute('href', './src/css/temaClaro.css');
+    localStorage.setItem('theme', './src/css/temaClaro.css');
+  } else {
+    stylesheet.setAttribute('href', './src/css/temaEscuro.css');
+    localStorage.setItem('theme', './src/css/temaEscuro.css');
+  }
+});
+
+function carregarTemaSalvoDetalhes() {
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedTheme) {
+    stylesheet.setAttribute('href', savedTheme);
+  } else {
+    stylesheet.setAttribute('href', './src/css/temaEscuro.css');
+  }
+}
+
 // Inicializar
 document.addEventListener('DOMContentLoaded', () => {
+  carregarTemaSalvoDetalhes()
   inicializarCarrinho();
   listarProduto();
 });

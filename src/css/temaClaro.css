@@ -1,6 +1,21 @@
+/* Tema Claro */
+
+:root {
+  --primary-red--: #c1272d;
+  --dark-red--: #ff3030;
+  --gray--: #4b5061;
+  --background-light--: #f5f5f5;
+  --background-header--: #ffffff;
+  --background-product--: #ffffff;
+  --text-color--: #000000;
+  --text-muted--: #757575;
+  --price-color--: #00af00;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #17181c;
+  background-color: var(--background-light--);
+  color: var(--text-color--);
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -16,7 +31,7 @@ body {
 .btn-flutuante {
   cursor: pointer;
   position: fixed;
-  color: aliceblue;
+  color: var(--text-color--);
   background-color: var(--primary-red--);
   padding: 15px;
   bottom: 30px;
@@ -32,7 +47,7 @@ body {
 
 .header {
   width: 100%;
-  background-color: #23262f;
+  background-color: var(--background-header--);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -50,6 +65,7 @@ body {
   width: 100px;
   transition: 1s ease-in-out;
 }
+
 .header .cabecalho a:hover img {
   transform: scale(1.15);
 }
@@ -77,7 +93,7 @@ body {
 }
 
 .header .cabecalho ul li a:hover {
-  color: var(--gray--);
+  color: var(--text-color--);
   background-color: var(--primary-red--);
 }
 
@@ -107,10 +123,15 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--background-product--);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }
 
 .produto a img {
-  float: left;
   margin-right: 10px;
   background: yellow;
   width: 300px;
@@ -127,9 +148,8 @@ hr {
   display: flex;
   align-items: center;
   flex-direction: column;
-  overflow: hidden;
   width: 300px;
-  height: 290px;
+  height: 190px;
   margin-top: 10px;
 }
 
@@ -140,7 +160,7 @@ hr {
 }
 
 .produto .categoria-produto {
-  color: var(--gray--);
+  color: var(--text-muted--);
   font-size: 0.6rem;
 }
 
@@ -150,7 +170,7 @@ hr {
 }
 
 .produto .marca-produto {
-  color: var(--gray--);
+  color: var(--text-muted--);
   font-size: 0.6rem;
 }
 
@@ -159,12 +179,12 @@ hr {
 }
 
 .produto .valor-produto {
-  color: greenyellow;
+  color: var(--price-color--);
   font-size: 1.7rem;
 }
 
 .produto .desconto {
-  color: green;
+  color: var(--price-color--);
   font-size: 0.7rem;
   margin-bottom: 10px;
 }
@@ -184,10 +204,10 @@ hr {
 }
 
 .carrinho {
-  color: hsl(208, 100%, 97%, 30%);
+  color: var(--text-color--);
   overflow-y: scroll;
   display: none;
-  background-color: #23262f;
+  background-color: var(--background-product--);
   padding: 30px;
   position: fixed;
   top: 150px;
@@ -215,7 +235,7 @@ hr {
 .carrinho .item-carrinho {
   display: flex;
   align-items: center;
-  background-color: #17181c;
+  background-color: var(--background-light--);
   padding: 10px;
   height: 100px;
   margin-bottom: 10px;
@@ -235,21 +255,21 @@ hr {
 
 .carrinho .item-carrinho .info {
   font-size: 1rem;
-  color: var(--gray--);
+  color: var(--text-color--);
 }
 
 .carrinho .item-carrinho .info .valor {
-  color: greenyellow;
+  color: var(--price-color--);
 }
 
 .item-carrinho .info .remover-item {
-  color: var(--gray--);
+  color: var(--text-color--);
   background-color: var(--primary-red--);
   padding: 5px;
 }
 
 .carrinho .total {
-  color: greenyellow;
+  color: var(--price-color--);
 }
 
 .carrinho .continuar {
@@ -266,7 +286,7 @@ hr {
 }
 
 .carrinho .finalizar {
-  color: aliceblue;
+  color: var(--text-color--);
 }
 
 .carrinho .finalizar:hover {
@@ -276,7 +296,7 @@ hr {
 
 .carrinho .limpar {
   margin-top: 5px;
-  color: aliceblue;
+  color: var(--text-color--);
 }
 
 .carrinho .limpar:hover {
@@ -305,7 +325,7 @@ hr {
 
 .container-detalhes {
   margin-top: 50px;
-  background-color: #23262f;
+  background-color: var(--background-header--);
 }
 
 .produto-clicado .produto-content {
@@ -327,35 +347,36 @@ hr {
 }
 
 .produto-info hr {
-  border: 2px solid #4b5061;
+  border: 2px solid var(--gray--);
   margin-bottom: 40px;
 }
 
 .produto-info .produto-titulo {
-  color: var(--gray--);
+  color: var(--text-color--);
   font-size: 1.9rem;
   text-transform: uppercase;
 }
 
 .produto-marca {
-  color: var(--gray--);
+  color: var(--text-muted--);
   font-size: 1.1rem;
   margin-bottom: 50px;
 }
 
 .produto-preco {
-  color: greenyellow;
+  color: var(--price-color--);
   font-size: 3.5rem;
 }
 
 .produto-desconto {
-  color: green;
+  color: var(--price-color--);
   font-size: 0.7rem;
 }
 
 .produto-preco-pix {
-  color: green;
+  color: var(--price-color--);
 }
+
 .produto-descricao h3 {
   color: var(--primary-red--);
   font-size: 0.9rem;

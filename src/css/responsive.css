@@ -17,8 +17,6 @@
     flex-direction: column;
     overflow: hidden;
     width: 200px;
-    height: 290px;
-    margin-top: 10px;
   }
 
   .produto .brand h2 {
@@ -93,7 +91,7 @@
   }
 
   .lista-produtos {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .produto a img {
@@ -179,17 +177,13 @@
   }
 
   .lista-produtos {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
 @media (max-width: 356px) {
   .cabecalho {
     flex-direction: column;
-  }
-
-  .lista-produtos {
-    grid-template-columns: repeat(1, 1fr);
   }
 
   .carrinho {

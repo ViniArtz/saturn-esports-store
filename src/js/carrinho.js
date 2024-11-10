@@ -3,7 +3,7 @@ let carrinho = [];
 
 // Elementos do DOM
 const getElementos = () => ({
-    btnCarrinho: document.querySelector('.btn'),
+    btnCarrinho: document.querySelector('.btn-menu'),
     btnFlutuante: document.querySelector('.btn-flutuante')
 });
 
@@ -65,7 +65,7 @@ function exibirCarrinho() {
                      <button class="continuar">Continuar comprando</button>
                      <button class="finalizar">Finalizar Compras</button>
                       <button class="limpar">Limpar Carrinho</button>`;
-                     
+
 
     docCarrinho.innerHTML = carrinhoHTML;
     configurarBotoesRemover();
@@ -101,7 +101,7 @@ function removerDoCarrinho(produtoId) {
     carrinho = carrinho.filter(produto => produto.id !== produtoId);
 }
 
-function limparCarrinho(){
+function limparCarrinho() {
     const carrinhoLen = (carrinho.length = 0)
     exibirCarrinho()
 }

@@ -1,4 +1,4 @@
-import { inicializarCarrinho, configurarBotoesAdicionar} from './carrinho.js';
+import { inicializarCarrinho, configurarBotoesAdicionar } from './carrinho.js';
 
 //Rota Produtos
 async function apiFetchProdutos() {
@@ -23,7 +23,7 @@ async function listaProdutos() {
         div += `
             <li class="produto">
                 <a data-id="${produto.id}" class="img-click" href="detalhes.html?id=${produto.id}">
-                    <img src="${produto.image}" alt="">
+                    <img src="${produto.image}" loading="lazy" fetchpriority="high" alt="">
                 </a>
                 <div class="brand">
                     <h2>${tituloLimitado}</h2>
@@ -37,11 +37,41 @@ async function listaProdutos() {
     });
 
     docLista.innerHTML = div;
-    configurarBotoesAdicionar(produtos.products);
+    configurarBotoesAdicionar(produto);
+}
+
+// Configuracoes de tema
+
+const btnMudarTema = document.getElementById('mudar-tema');
+const stylesheet = document.getElementById('theme-stylesheet');
+
+btnMudarTema.addEventListener('click', () => {
+    // Verifica o caminho atual do CSS
+    const currentTheme = stylesheet.getAttribute('href');
+
+    // Alterna entre os temas claro e escuro
+    if (currentTheme === './src/css/temaEscuro.css') {
+        stylesheet.setAttribute('href', './src/css/temaClaro.css');
+        localStorage.setItem('theme', './src/css/temaClaro.css');
+    } else {
+        stylesheet.setAttribute('href', './src/css/temaEscuro.css');
+        localStorage.setItem('theme', './src/css/temaEscuro.css');
+    }
+});
+
+function carregarTemaSalvo() {
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) {
+        stylesheet.setAttribute('href', savedTheme);
+    } else {
+        stylesheet.setAttribute('href', './src/css/temaEscuro.css');
+    }
 }
 
 // Inicializar
 document.addEventListener('DOMContentLoaded', () => {
+    carregarTemaSalvo()
     inicializarCarrinho();
     listaProdutos();
 });

@@ -5,3 +5,23 @@
   --black--: #000000;
   --gray--: #cccccc;
 }
+
+:root {
+  /* Variáveis para o tema escuro */
+  --background-color: #17181c;
+  --primary-text-color: #ffffff;
+  --secondary-text-color: var(--gray--);
+  --button-background: var(--primary-red--);
+  --button-hover-background: var(--dark-red--);
+  --price-color: greenyellow;
+}
+
+/* Tema claro */
+:root.light-mode {
+  --background-color: #f5f5f5;
+  --primary-text-color: #000000;
+  --secondary-text-color: #4b5061;
+  --button-background: #ff6161;
+  --button-hover-background: #ff3030;
+  --price-color: #ff0000;
+}

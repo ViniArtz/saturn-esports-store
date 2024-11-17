@@ -25,7 +25,7 @@ Tema Escuro
 
 # Responsividade
 
-<div>
+<div style="display: flex; flex-wrap: wrap;">
 <img src="./src/images/screens/white/Macbook-Air-1559x1319.png" alt="Descrição da Imagem" style="width: 200px;">
 <br>
 <img src="./src/images/screens/white/iPad-Air-5-1138x1309.png" alt="Descrição da Imagem" style="width: 200px;">

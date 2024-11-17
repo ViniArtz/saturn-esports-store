@@ -8,14 +8,14 @@ const btnNextPage = document.querySelector('.next-page')
 // Função para obter o ID atual da URL
 function obterIdAtual() {
     const params = new URLSearchParams(window.location.search);
-    return parseInt(params.get('id')) || 1; // Retorna 1 se não houver ID na URL
+    return parseInt(params.get('id')) || 1;
 }
 
 // Função para atualizar o ID na URL e exibir na interface
 function atualizarId(novoId) {
     const url = new URL(window.location);
     url.searchParams.set('id', novoId);
-    window.history.pushState({}, '', url); // Mantido para atualizar URL
+    window.history.pushState({}, '', url);
 
     document.querySelector('.current-id').textContent = `Pagina: ${novoId}`;
 }
@@ -24,19 +24,18 @@ function atualizarId(novoId) {
 let idAtual = obterIdAtual();
 atualizarId(idAtual);
 
-// Funções para navegar entre páginas
 function paginaAnterior() {
     if (idAtual > 1) {
         idAtual--;
         atualizarId(idAtual);
-        apiFetchProdutos(); // Atualiza os produtos
+        apiFetchProdutos();
     }
 }
 
 function proximaPagina() {
     idAtual++;
     atualizarId(idAtual);
-    apiFetchProdutos(); // Atualiza os produtos
+    apiFetchProdutos();
 }
 
 // Adiciona eventos aos botões

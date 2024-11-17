@@ -26,13 +26,13 @@ Tema Escuro
 # Responsividade
 
 <div style="display: flex;">
-<img src="./src/images/screens/white/Macbook-Air-1559x1319.png" alt="Descrição da Imagem" style="width: 1559px;">
+<img src="./src/images/screens/white/Macbook-Air-1559x1319.png" alt="Descrição da Imagem" style="width: 900px;">
 <br>
-<img src="./src/images/screens/white/iPad-Air-5-1138x1309.png" alt="Descrição da Imagem" style="width: 1138px;">
+<img src="./src/images/screens/white/iPad-Air-5-1138x1309.png" alt="Descrição da Imagem" style="width: 700px;">
 <br>
-<img src="./src/images/screens/white/iPhone-14-Pro-Max-877x1172.png" alt="Descrição da Imagem" style="width: 200px;">
+<img src="./src/images/screens/white/iPhone-14-Pro-Max-877x1172.png" alt="Descrição da Imagem" style="width: 400px;">
 <br>
-<img src="./src/images/screens/white/Pixel-7-Pro-480x1040.png" alt="Descrição da Imagem" style="width: 200px;">
+<img src="./src/images/screens/white/Pixel-7-Pro-480x1040.png" alt="Descrição da Imagem" style="width: 300px;">
 <br>
 <img src="./src/images/screens/white/iPhone-14-Pro-393x852.png" alt="Descrição da Imagem" style="width: 200px;">
 <br>

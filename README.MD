@@ -14,11 +14,11 @@
 # Temas Claro e Escuro
 
 <div>
-<img src="./src/images/screens/white/Macbook-Air-1559x1319.png" alt="Descrição da Imagem" style="width: 460px;" >
+<img src="./src/images/screens/white/Macbook-Air-1559x1319.png" alt="Descrição da Imagem"  >
 </div>
 <hr>
 <div>
-<img src="./src/images/screens/dark/Macbook-Air-1559x1319.png" alt="Descrição da Imagem" style="width: 460px;">
+<img src="./src/images/screens/dark/Macbook-Air-1559x1319.png" alt="Descrição da Imagem" >
 </div>
 
 # Responsividade

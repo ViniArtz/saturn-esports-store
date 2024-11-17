@@ -30,3 +30,7 @@
 # Carrinho de Compras
 
 <img src="./src/images/screens/carrinho/Carrinho.png" alt="Descrição da Imagem">
+
+# Página Detalhes do Produto
+
+<img src="./src/images/screens/detalhes/Detalhes.png" alt="Descrição da Imagem">

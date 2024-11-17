@@ -11,11 +11,14 @@
 - Projeto totalmente funcional(até o momento ainda em construção), já tem os requisitos de carrinho, pagina de detalhes do produto(escolha um produto clicando na imagem dele).
 - paginação dos produtos em 6 páginas com no máximo 28 produtos.
 
-# Responsividade
+# Temas Claro e Escuro
 
+Tema Claro
 <div>
 <img src="./src/images/screens/white/Macbook-Air-1559x1319.png" alt="Descrição da Imagem" style="width: 460px;" >
 </div>
+<br>
+Tema Escuro
 <div>
 <img src="./src/images/screens/dark/Macbook-Air-1559x1319.png" alt="Descrição da Imagem" style="width: 460px;">
 </div>

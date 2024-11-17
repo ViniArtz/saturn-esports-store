@@ -13,12 +13,10 @@
 
 # Temas Claro e Escuro
 
-Tema Claro
 <div>
 <img src="./src/images/screens/white/Macbook-Air-1559x1319.png" alt="Descrição da Imagem" style="width: 460px;" >
 </div>
-<br>
-Tema Escuro
+<hr>
 <div>
 <img src="./src/images/screens/dark/Macbook-Air-1559x1319.png" alt="Descrição da Imagem" style="width: 460px;">
 </div>

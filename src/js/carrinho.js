@@ -65,7 +65,6 @@ function exibirCarrinho() {
     const totalCarrinho = somaCarrinho().toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
     carrinhoHTML += `<h3 class="total">Total: ${totalCarrinho}</h3>
                      <button class="continuar">Continuar comprando</button>
-                     <button class="finalizar">Finalizar Compras</button>
                       <button class="limpar">Limpar Carrinho</button>`;
 
 

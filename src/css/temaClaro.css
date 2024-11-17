@@ -287,11 +287,10 @@ hr {
   color: var(--price-color--);
 }
 
-.item-carrinho .info .botoes
-
 .item-carrinho .info .botoes .botao {
   color: var(--text-color--);
   background-color: var(--primary-red--);
+  border-radius: 5px;
   padding: 5px;
 }
 

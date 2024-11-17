@@ -84,7 +84,7 @@ async function listaProdutos(produtos) {
     });
 
     docLista.innerHTML = div;
-    botaoAdicionar(produto);
+    botaoAdicionar(produtos);
 }
 // Configuracoes de tema
 

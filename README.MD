@@ -17,5 +17,5 @@
 <img src="./src/images/screens/white/Macbook-Air-1559x1319.png" alt="Descrição da Imagem" >
 </div>
 <div>
-<img src="./src/images/screens/dark/Macbook-Air-1559x975.png" alt="Descrição da Imagem">
+<img src="./src/images/screens/dark/Macbook-Air-1559x1319.png" alt="Descrição da Imagem">
 </div>

@@ -192,6 +192,31 @@ hr {
   background-color: var(--primary-red--);
 }
 
+.btn-nav .previous-page {
+  color: var(--gray--);
+  background-color: var(--button-background);
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.5s ease-in-out;
+}
+.previous-page:hover {
+  background-color: var(--button-hover-background);
+}
+
+.btn-nav .next-page {
+  color: var(--gray--);
+  background-color: var(--button-background);
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.next-page:hover {
+  background-color: var(--button-hover-background);
+}
+
 .carrinho {
   color: hsl(208, 100%, 97%, 30%);
   overflow-y: scroll;
@@ -251,7 +276,7 @@ hr {
   color: greenyellow;
 }
 
-.item-carrinho .info .remover-item {
+.item-carrinho .info .botao {
   color: var(--gray--);
   background-color: var(--primary-red--);
   padding: 5px;

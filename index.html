@@ -47,20 +47,16 @@
       </header>
       <section class="container">
         <h2 class="titulo-produtos">Produtos</h2>
-        <ul class="lista-produtos">
-          <!-- <li class="produto">
-            <a href="#"><img src="${produto.image}" alt=""></a>
-          <div class="brand">
-            <h2>${produto.title}</h2>
-            <span class="categoria-produto"><b>Categoria:</b> ${produto.category}</span>
-            <p class="marca-produto"><b>Marca:</b> ${produto.brand}</p>
-            <h4 class="valor-produto">${brl}</h4>
-            <span class="desconto">10% de desconto para pagamento no pix</span>
-            <button class="botao-adicionar">Adicionar ao Carrinho</button>
-          </div>
-          </li> -->
+        <ul data-id="1" class="lista-produtos">
+          <!-- Aqui Ficam os produtos da api -->
         </ul>
-        <ul class="carrinho"></ul>
+        <div class="btn-nav">
+          <button href="" class="previous-page"><-Previous</button>
+          <button href="" class="next-page">Next-></button>
+        </div>
+        <ul class="carrinho">
+          <!-- Aqui Fica o Carrinho -->
+        </ul>
       </section>
     </main>
     <script type="module" src="./src/js/script.js"></script>

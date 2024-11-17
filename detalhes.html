@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="shortcut icon"
+      href="./src/images/saturn-.ico"
+      type="image/x-icon"
+    />
+    <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
@@ -33,7 +38,7 @@
           <ul>
             <li><a id="mudar-tema" class="btn bx bx-sm bx-sun"></a></li>
             <li><a href="./index.html">Produtos</a></li>
-            <li><a class="btn bx bx-cart bx-sm"></a></li>
+            <li><a class="btn-menu bx bx-cart bx-sm"></a></li>
             <li><a class="bx bx-user bx-sm"></a></li>
             <li><a>Entrar</a></li>
           </ul>
@@ -45,28 +50,7 @@
       </a>
       <div class="container-detalhes">
         <ul class="carrinho"></ul>
-        <section class="produto-clicado">
-          <!-- <div class="produto-content">
-            <figure class="produto-imagem">
-              <img src="${produto.product.img}" alt="item"/>
-            </figure>
-            <div class="produto-info">
-              <h2 class="produto-titulo">${produto.product.title}</h2>
-              <p class="produto-categoria"><strong>Categoria:</strong> ${produto.product.category}</p>
-              <p class="produto-marca"><strong>Marca:</strong>${produto.product.brand}</p>
-              <h2 class="produto-preco">${brl}</h2>
-              <p class="produto-desconto">10% de desconto para pagamento no pix</p>
-              <div class="produto-descricao">
-                <h3>Descrição do Produto</h3>
-                <p>${produto.product.description}</p>
-              </div>
-              <div class="btn-action">
-                <button class="botao-adicionar" data-id="${produto.product.id}">Adicionar ao Carrinho</button>
-                <button class="botao-comprar" data-id="${produto.product.id}">Comprar Agora</button>
-              </div>
-            </div>
-          </div> -->
-        </section>
+        <section class="produto-clicado"></section>
       </div>
     </main>
     <script type="module" src="./src/js/detalhes.js"></script>

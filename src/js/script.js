@@ -1,8 +1,13 @@
-import { inicializarCarrinho, configurarBotoesAdicionar } from './carrinho.js';
+import { inicializarCarrinho, botaoAdicionar } from './carrinho.js';
+const btnMudarTema = document.getElementById('mudar-tema');
+const stylesheet = document.getElementById('theme-stylesheet');
+const btnPrevious = document.querySelector('.previous-page') //Funcao ainda nao concluida
+const btnNextPage = document.querySelector('.next-page')  //Funcao ainda nao concluida
 
 //Rota Produtos
+
 async function apiFetchProdutos() {
-    const response = await fetch('https://fakestoreapi.in/api/products');
+    const response = await fetch(`https://fakestoreapi.in/api/products?page=1&limit=28`);
     const produtos = await response.json();
     return produtos;
 }
@@ -12,6 +17,8 @@ async function listaProdutos() {
     const docLista = document.querySelector('.lista-produtos');
     const produtos = await apiFetchProdutos();
 
+
+
     docLista.innerHTML = '<p>Carregando Produtos...</p>';
     let div = '';
 
@@ -19,14 +26,14 @@ async function listaProdutos() {
 
     produto.forEach(produto => {
         const brl = produto.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
-        const tituloLimitado = produto.title.length > 30 ? produto.title.substring(0, 30) + '...' : produto.title;
+        const tituloLimitado = produto.title.slice(0, 30) + '...';
         div += `
             <li class="produto">
                 <a data-id="${produto.id}" class="img-click" href="detalhes.html?id=${produto.id}">
                     <img src="${produto.image}" loading="lazy" fetchpriority="high" alt="">
                 </a>
                 <div class="brand">
-                    <h2>${tituloLimitado}</h2>
+                    <h2 title="${produto.title}">${tituloLimitado}</h2>
                     <p class="marca-produto"><b>Marca:</b> ${produto.brand}</p>
                     <h4 class="valor-produto">${brl}</h4>
                     <span class="desconto">10% de desconto para pagamento no pix</span>
@@ -37,19 +44,13 @@ async function listaProdutos() {
     });
 
     docLista.innerHTML = div;
-    configurarBotoesAdicionar(produto);
+    botaoAdicionar(produto);
 }
-
 // Configuracoes de tema
 
-const btnMudarTema = document.getElementById('mudar-tema');
-const stylesheet = document.getElementById('theme-stylesheet');
-
 btnMudarTema.addEventListener('click', () => {
-    // Verifica o caminho atual do CSS
     const currentTheme = stylesheet.getAttribute('href');
 
-    // Alterna entre os temas claro e escuro
     if (currentTheme === './src/css/temaEscuro.css') {
         stylesheet.setAttribute('href', './src/css/temaClaro.css');
         localStorage.setItem('theme', './src/css/temaClaro.css');
@@ -68,6 +69,8 @@ function carregarTemaSalvo() {
         stylesheet.setAttribute('href', './src/css/temaEscuro.css');
     }
 }
+
+
 
 // Inicializar
 document.addEventListener('DOMContentLoaded', () => {

@@ -203,6 +203,31 @@ hr {
   background-color: var(--primary-red--);
 }
 
+.btn-nav .previous-page {
+  color: var(--text-color--);
+  background-color: var(--button-background);
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.5s ease-in-out;
+}
+.previous-page:hover {
+  background-color: var(--button-hover-background);
+}
+
+.btn-nav .next-page {
+  color: var(--text-color--);
+  background-color: var(--button-background);
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.next-page:hover {
+  background-color: var(--button-hover-background);
+}
+
 .carrinho {
   color: var(--text-color--);
   overflow-y: scroll;
@@ -262,7 +287,9 @@ hr {
   color: var(--price-color--);
 }
 
-.item-carrinho .info .remover-item {
+.item-carrinho .info .botoes
+
+.item-carrinho .info .botoes .botao {
   color: var(--text-color--);
   background-color: var(--primary-red--);
   padding: 5px;

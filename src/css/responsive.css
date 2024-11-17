@@ -207,7 +207,7 @@
 
 /* Responsividade da Página de detalhes... */
 
-@media (max-width: 978px) {
+@media (max-width: 1378px) {
   .produto-clicado .produto-content {
     flex-direction: column;
   }

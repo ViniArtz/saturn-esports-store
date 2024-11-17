@@ -1,4 +1,3 @@
-// Variável global do carrinho
 let carrinho = [];
 
 // Elementos do DOM
@@ -53,7 +52,10 @@ function exibirCarrinho() {
                         <h5>${tituloLimitado}</h5>
                         <p>${produto.quantidade}x</p>
                         <p class="valor">${brl}</p>
-                        <button class="remover-item" data-id="${produto.id}">Excluir</button>
+                        <div class="botoes">
+                        <button class="botao aumentar-quantidade" data-id="${produto.id}">+</button>
+                        <button class="botao diminuir-quantidade" data-id="${produto.id}">-</button>
+                      </div>
                     </div>
                 </div>
             `;
@@ -68,8 +70,10 @@ function exibirCarrinho() {
 
 
     docCarrinho.innerHTML = carrinhoHTML;
-    configurarBotoesRemover();
-    configurarBotoesLimpar()
+    botaoRemover();
+    botaoAumentar();
+    botaoDiminuir();
+    botaoLimpar();
 }
 
 // Funções de manipulação do carrinho
@@ -79,6 +83,17 @@ function adicionarAoCarrinho(produto) {
         produtoSelecionado.quantidade += 1;
     } else {
         carrinho.push({ ...produto, quantidade: 1 });
+    }
+    exibirCarrinho();
+    salvarCarrinho();
+}
+
+function aumentarQuantidade(produtoId) {
+    const produtoExistente = carrinho.find(item => item.id === produtoId);
+    if (produtoExistente) {
+        if (produtoExistente.quantidade) {
+            produtoExistente.quantidade += 1;
+        }
     }
     exibirCarrinho();
     salvarCarrinho();
@@ -107,7 +122,7 @@ function limparCarrinho() {
 }
 
 // Funções de eventos
-function configurarBotoesRemover() {
+function botaoRemover() {
     const btnRemover = document.querySelectorAll('.remover-item');
     btnRemover.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -122,7 +137,29 @@ function configurarBotoesRemover() {
     }
 }
 
-function configurarBotoesLimpar() {
+function botaoAumentar() {
+    const btnAumentar = document.querySelectorAll('.aumentar-quantidade');
+    btnAumentar.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const produtoId = e.target.getAttribute('data-id');
+            aumentarQuantidade(Number(produtoId));
+        });
+    });
+    salvarCarrinho()
+}
+
+function botaoDiminuir() {
+    const btnDiminuir = document.querySelectorAll('.diminuir-quantidade');
+    btnDiminuir.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const produtoId = e.target.getAttribute('data-id');
+            diminuirQuantidade(Number(produtoId));
+        });
+    });
+    salvarCarrinho()
+}
+
+function botaoLimpar() {
     const btnLimpar = document.querySelector('.limpar');
     if (btnLimpar) {
         btnLimpar.addEventListener('click', limparCarrinho);
@@ -130,7 +167,7 @@ function configurarBotoesLimpar() {
     salvarCarrinho()
 }
 
-function configurarBotoesAdicionar(produtos) {
+function botaoAdicionar(produtos) {
     const btnAdicionar = document.querySelectorAll('.botao-adicionar');
     btnAdicionar.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -169,7 +206,7 @@ function somaCarrinho() {
 export {
     inicializarCarrinho,
     adicionarAoCarrinho,
-    configurarBotoesAdicionar,
+    botaoAdicionar,
     exibirCarrinho,
     carregarCarrinho,
     salvarCarrinho

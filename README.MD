@@ -26,3 +26,7 @@
 <img src="./src/images/screens/Responsivo/Tema Claro.png" alt="Descrição da Imagem">
 <hr>
 <img src="./src/images/screens/Responsivo/Tema Escuro.png" alt="Descrição da Imagem">
+
+# Carrinho de Compras
+
+<img src="./src/images/screens/carrinho/Carrinho.png" alt="Descrição da Imagem">

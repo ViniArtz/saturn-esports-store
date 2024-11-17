@@ -1,11 +1,7 @@
-## loja virtual fake com consumo de API
 
-<style>
-    Body{
-        color:#891212;
-        background-color: #f5f5f5;
-    }
-</style>
+## loja virtual fake com consumo de API
+<div style="        color:#891212;
+        background-color: #f5f5f5;">
 
 - Projeto de Estudo Feito Com a Api de [loja Fake](https://fakestoreapi.in)
 
@@ -41,3 +37,5 @@
 # Página Detalhes do Produto
 
 <img src="./src/images/screens/detalhes/Detalhes.png" alt="Descrição da Imagem">
+
+</div>

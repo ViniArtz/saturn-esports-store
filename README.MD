@@ -1,5 +1,12 @@
 ## loja virtual fake com consumo de API
 
+<style>
+    Body{
+        color:#891212;
+        background-color: #f5f5f5;
+    }
+</style>
+
 - Projeto de Estudo Feito Com a Api de [loja Fake](https://fakestoreapi.in)
 
 <img src="./src/images/saturn%20.png" alt="Descrição da Imagem" style="width: 250px;">

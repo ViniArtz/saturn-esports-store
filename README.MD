@@ -2,7 +2,7 @@
 
 - Projeto de Estudo Feito Com a Api de [loja Fake](https://fakestoreapi.in)
 
-<img src="./src/images/saturn%20.png" alt="Descrição da Imagem" style="width: 100px;">
+<img src="./src/images/saturn%20.png" alt="Descrição da Imagem" style="width: 150px;">
 
 - Logo do Projeto Feita por mim com Adobe Illustrator
 
@@ -14,15 +14,15 @@
 # Responsividade
 
 <div style="display: flex;">
-<img src="./src/images/screens/white/Macbook-Air-1559x1319.png" alt="Descrição da Imagem" style="width: 200px;">
-<img src="./src/images/screens/white/iPad-Air-5-1138x1309.png" alt="Descrição da Imagem" style="width: 200px;">
-<img src="./src/images/screens/white/iPhone-14-Pro-Max-877x1172.png" alt="Descrição da Imagem" style="width: 200px;">
-<img src="./src/images/screens/white/Pixel-7-Pro-480x1040.png" alt="Descrição da Imagem" style="width: 200px;">
-<img src="./src/images/screens/white/iPhone-14-Pro-393x852.png" alt="Descrição da Imagem" style="width: 200px;">
+<img src="./src/images/screens/white/Macbook-Air-1559x1319.png" alt="Descrição da Imagem" style="width: 150px;">
+<img src="./src/images/screens/white/iPad-Air-5-1138x1309.png" alt="Descrição da Imagem" style="width: 150px;">
+<img src="./src/images/screens/white/iPhone-14-Pro-Max-877x1172.png" alt="Descrição da Imagem" style="width: 150px;">
+<img src="./src/images/screens/white/Pixel-7-Pro-480x1040.png" alt="Descrição da Imagem" style="width: 150px;">
+<img src="./src/images/screens/white/iPhone-14-Pro-393x852.png" alt="Descrição da Imagem" style="width: 150px;">
 </div>
 <div style="display: flex;">
-<img src="./src/images/screens/dark/Macbook-Air-1559x975.png" alt="Descrição da Imagem" style="width: 100px;">
-<img src="./src/images/screens/dark/iPad-Air-5-820x1180.png" alt="Descrição da Imagem" style="width: 100px;">
-<img src="./src/images/screens/dark/Pixel-7-Pro-480x1040.png" alt="Descrição da Imagem" style="width: 100px;">
-<img src="./src/images/screens/dark/iPhone-14-Pro-393x852.png" alt="Descrição da Imagem" style="width: 100px;">
+<img src="./src/images/screens/dark/Macbook-Air-1559x975.png" alt="Descrição da Imagem" style="width: 150px;">
+<img src="./src/images/screens/dark/iPad-Air-5-820x1180.png" alt="Descrição da Imagem" style="width: 150px;">
+<img src="./src/images/screens/dark/Pixel-7-Pro-480x1040.png" alt="Descrição da Imagem" style="width: 150px;">
+<img src="./src/images/screens/dark/iPhone-14-Pro-393x852.png" alt="Descrição da Imagem" style="width: 150px;">
 </div>

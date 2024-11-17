@@ -1,30 +1,70 @@
 import { inicializarCarrinho, botaoAdicionar } from './carrinho.js';
+
 const btnMudarTema = document.getElementById('mudar-tema');
 const stylesheet = document.getElementById('theme-stylesheet');
-const btnPrevious = document.querySelector('.previous-page') //Funcao ainda nao concluida
-const btnNextPage = document.querySelector('.next-page')  //Funcao ainda nao concluida
+const btnPrevious = document.querySelector('.previous-page')
+const btnNextPage = document.querySelector('.next-page')
+
+// Função para obter o ID atual da URL
+function obterIdAtual() {
+    const params = new URLSearchParams(window.location.search);
+    return parseInt(params.get('id')) || 1; // Retorna 1 se não houver ID na URL
+}
+
+// Função para atualizar o ID na URL e exibir na interface
+function atualizarId(novoId) {
+    const url = new URL(window.location);
+    url.searchParams.set('id', novoId);
+    window.history.pushState({}, '', url); // Mantido para atualizar URL
+
+    document.querySelector('.current-id').textContent = `Pagina: ${novoId}`;
+}
+
+// Inicializa com o ID atual
+let idAtual = obterIdAtual();
+atualizarId(idAtual);
+
+// Funções para navegar entre páginas
+function paginaAnterior() {
+    if (idAtual > 1) {
+        idAtual--;
+        atualizarId(idAtual);
+        apiFetchProdutos(); // Atualiza os produtos
+    }
+}
+
+function proximaPagina() {
+    idAtual++;
+    atualizarId(idAtual);
+    apiFetchProdutos(); // Atualiza os produtos
+}
+
+// Adiciona eventos aos botões
+btnPrevious.addEventListener('click', paginaAnterior);
+
+btnNextPage.addEventListener('click', proximaPagina);
 
 //Rota Produtos
 
 async function apiFetchProdutos() {
-    const response = await fetch(`https://fakestoreapi.in/api/products?page=1&limit=28`);
+    const response = await fetch(`https://fakestoreapi.in/api/products?page=${idAtual}&limit=28`);
     const produtos = await response.json();
-    return produtos;
+    return listaProdutos(produtos.products)
 }
 
 // Lista de Produtos
-async function listaProdutos() {
+async function listaProdutos(produtos) {
     const docLista = document.querySelector('.lista-produtos');
-    const produtos = await apiFetchProdutos();
+    // const produtos = await apiFetchProdutos();
 
 
 
     docLista.innerHTML = '<p>Carregando Produtos...</p>';
     let div = '';
 
-    const produto = produtos.products
 
-    produto.forEach(produto => {
+
+    produtos.forEach(produto => {
         const brl = produto.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
         const tituloLimitado = produto.title.slice(0, 30) + '...';
         div += `
@@ -76,5 +116,6 @@ function carregarTemaSalvo() {
 document.addEventListener('DOMContentLoaded', () => {
     carregarTemaSalvo()
     inicializarCarrinho();
+    apiFetchProdutos()
     listaProdutos();
 });

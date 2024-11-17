@@ -21,13 +21,14 @@ async function fetchProdutoDetalhes() {
 async function listarProduto() {
   const produtoClicado = document.querySelector('.produto-clicado');
   const produto = await fetchProdutoDetalhes();
+  const detalhesProduto = produto.product;
+  const tituloPagina = document.querySelector('title')
+  tituloPagina.innerText = `${detalhesProduto.title}`
 
   if (!produto) {
     produtoClicado.innerHTML = '<p>Erro ao carregar produto.</p>';
     return;
   }
-
-  const detalhesProduto = produto.product;
   const brl = detalhesProduto.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
 
   let div = `

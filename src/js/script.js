@@ -46,7 +46,7 @@ btnNextPage.addEventListener('click', proximaPagina);
 //Rota Produtos
 
 async function apiFetchProdutos() {
-    const response = await fetch(`https://fakestoreapi.in/api/products?page=${idAtual}&limit=28`);
+    const response = await fetch(`https://fakestoreapi.in/api/products?page=${idAtual}&limit=12"`);
     const produtos = await response.json();
     return listaProdutos(produtos.products)
 }
@@ -54,9 +54,6 @@ async function apiFetchProdutos() {
 // Lista de Produtos
 async function listaProdutos(produtos) {
     const docLista = document.querySelector('.lista-produtos');
-    // const produtos = await apiFetchProdutos();
-
-
 
     docLista.innerHTML = '<p>Carregando Produtos...</p>';
     let div = '';
@@ -116,5 +113,4 @@ document.addEventListener('DOMContentLoaded', () => {
     carregarTemaSalvo()
     inicializarCarrinho();
     apiFetchProdutos()
-    listaProdutos();
 });
